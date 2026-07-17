@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - CareBridge</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="nav-left">
+        <img src="images/logo.png" class="nav-logo">
+        <span>CareBridge</span>
+    </div>
+
+    <div class="nav-right">
+        <span onclick="goToDashboard()">Home</span>
+        <span onclick="goToResources()">Resources</span>
+        <span onclick="goToAI()">Chat With Us</span>
+        <span onclick="goToBooking()">Consult</span>
+        <span onclick="goToMyBookings()">My Bookings</span> 
+        <span onclick="goToLogin()">Logout</span>
+    </div>
+</div>
+
+<!-- HEADER -->
+<div class="section">
+    <h2>Parenting Resources</h2>
+    <p>Browse helpful guides and tips for parents.</p>
+</div>
+
+<!-- RESOURCE CARDS -->
+<div class="section">
+
+    <div class="resource-container">
+
+        <div class="resource-card" onclick="window.location.href='newborn.html'">
+    <h3>Newborn Care</h3>
+    <p>Learn how to take care of your newborn baby.</p>
+</div>
+
+<div class="resource-card" onclick="window.location.href='pregnancy.html'">
+    <h3>Pregnancy Tips</h3>
+    <p>Important tips during pregnancy stages.</p>
+</div>
+
+<div class="resource-card" onclick="window.location.href='nutrition.html'">
+    <h3>Child Nutrition</h3>
+    <p>Healthy food and nutrition for kids.</p>
+</div>
+
+    </div>
+
+</div>
+
+<div class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-section">
+            <h3>CareBridge</h3>
+            <p>Your partner in parenting and healthcare support.</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <p onclick="goToDashboard()">Home</p>
+            <p onclick="goToResources()">Resources</p>
+            <p onclick="goToAI()">AI Assistant</p>
+            <p onclick="goToBooking()">Consult</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p>Email: carebridge@gmail.com</p>
+            <p>Phone: +63 912 345 6789</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 CareBridge. All rights reserved.</p>
+    </div>
+
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

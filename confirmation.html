@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Confirmation - CareBridge</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <div class="nav-left">
+        <img src="images/logo.png" class="nav-logo">
+        <span>CareBridge</span>
+    </div>
+
+    <div class="nav-right">
+        <span onclick="goToDashboard()">Home</span>
+        <span onclick="goToResources()">Resources</span>
+        <span onclick="goToAI()">Chat With Us</span>
+        <span onclick="goToBooking()">Consult</span>
+        <span onclick="goToMyBookings()">My Bookings</span> 
+        <span onclick="goToLogin()">Logout</span>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Booking Confirmation</h2>
+</div>
+
+<div class="booking-display" id="confirmDisplay"></div>
+
+<!-- 🔥 BOOK AGAIN BUTTON (HIDDEN FIRST) -->
+<div style="text-align:center; margin-top:20px;">
+    <button id="bookAgainBtn" style="display:none;" onclick="goToBooking()">
+        Book Now
+    </button>
+</div>
+
+<div class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-section">
+            <h3>CareBridge</h3>
+            <p>Your partner in parenting and healthcare support.</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <p onclick="goToDashboard()">Home</p>
+            <p onclick="goToResources()">Resources</p>
+            <p onclick="goToAI()">AI Assistant</p>
+            <p onclick="goToBooking()">Consult</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p>Email: carebridge@gmail.com</p>
+            <p>Phone: +63 912 345 6789</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 CareBridge. All rights reserved.</p>
+    </div>
+
+</div>
+
+<script src="js/app.js"></script>
+
+<script>
+const data = JSON.parse(localStorage.getItem("latestBooking"));
+
+if (data) {
+    document.getElementById("confirmDisplay").innerHTML = `
+        <div class="booking-card">
+            <h3>${data.doctor}</h3>
+
+            <p><strong>Plan:</strong> ${data.plan}</p>
+            <p><strong>Date:</strong> ${data.date}</p>
+            <p><strong>Time:</strong> ${data.time}</p>
+            <p><strong>Price:</strong> ${data.price}</p>
+
+            <!-- 🔥 ADD THIS (Procedure 5) -->
+            <p><strong>Name:</strong> ${data.name}</p>
+            <p><strong>Spouse:</strong> ${data.spouse || "N/A"}</p>
+            <p><strong>Baby:</strong> ${data.baby}</p>
+            <p><strong>Email:</strong> ${data.email}</p>
+            <p><strong>Contact:</strong> ${data.contact}</p>
+
+            <h4>Rate Your Experience</h4>
+
+            <div class="rating">
+                <span onclick="rate(1)">⭐</span>
+                <span onclick="rate(2)">⭐</span>
+                <span onclick="rate(3)">⭐</span>
+                <span onclick="rate(4)">⭐</span>
+                <span onclick="rate(5)">⭐</span>
+            </div>
+
+            <button onclick="cancelBooking(this)">Cancel Booking</button>
+        </div>
+    `;
+}
+
+function rate(star) {
+    alert("You rated " + star + " stars ⭐");
+}
+
+/* 🔥 CANCEL FUNCTION */
+function cancelBooking(btn) {
+    const card = btn.closest(".booking-card");
+
+    // remove card
+    card.remove();
+
+    // show "Book Now"
+    document.getElementById("bookAgainBtn").style.display = "inline-block";
+}
+</script>
+
+</body>
+</html>

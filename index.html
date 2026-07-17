@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareBridge</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="center">
+
+    <div class="card modern">
+
+        <!-- Logo -->
+        <img src="images/logo.png" class="logo">
+
+        <h1>Create Account</h1>
+
+        <!-- Inputs -->
+        <input type="email" placeholder="Email address">
+        
+        <div class="password-box">
+    <input type="password" id="password" placeholder="Password">
+    <span onclick="togglePassword('password', this)">👁</span>
+</div>
+
+        <!-- Button -->
+        <button onclick="goToLogin()">Create account</button>
+
+        <!-- Divider -->
+        <p class="divider">or sign up with</p>
+
+        <!-- Fake social icons -->
+        <div class="socials">
+            <div class="icon">G</div>
+            <div class="icon">⬜</div>
+        </div>
+
+        <!-- Terms -->
+        <p class="terms">
+            By creating an account you agree to CareBridge's 
+            <span>Terms</span> and <span>Privacy Policy</span>.
+        </p>
+
+    </div>
+
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

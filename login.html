@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - CareBridge</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="center">
+
+    <div class="card modern">
+
+        <h1>Login</h1>
+
+        <!-- Inputs -->
+        <input type="email" placeholder="Email address">
+        
+        <div class="password-box">
+            <input type="password" id="loginPassword" placeholder="Password">
+            <span onclick="togglePassword('loginPassword', this)">👁</span>
+        </div>
+
+        <!-- Button -->
+        <button onclick="goToProfile()">Login</button>
+
+        <!-- Switch -->
+        <p class="terms">
+            Don’t have an account? 
+            <span onclick="goToRegister()" style="cursor:pointer;">Create one</span>
+        </p>
+
+    </div>
+
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

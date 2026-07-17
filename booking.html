@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Book Consultation - CareBridge</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 🔥 SUBSCRIPTION LOCK -->
+<script>
+const isPremium = localStorage.getItem("isPremium");
+
+if (!isPremium) {
+    alert("Please subscribe first before booking.");
+    window.location.href = "subscription.html";
+}
+</script>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="nav-left">
+        <img src="images/logo.png" class="nav-logo">
+        <span>CareBridge</span>
+    </div>
+
+    <div class="nav-right">
+        <span onclick="goToDashboard()">Home</span>
+        <span onclick="goToResources()">Resources</span>
+        <span onclick="goToAI()">Chat With Us</span>
+        <span onclick="goToBooking()">Consult</span>
+        <span onclick="goToMyBookings()">My Bookings</span> 
+        <span onclick="goToLogin()">Logout</span>
+    </div>
+</div>
+
+<!-- HEADER -->
+<div class="section">
+    <h2>Book a Consultation</h2>
+    <p>Select subscription and doctor.</p>
+</div>
+
+<!-- SUBSCRIPTION (UI ONLY - optional na to, pwede mo i-remove later) -->
+<div class="subscription">
+
+    <div class="sub-card" onclick="selectPlan('Premium', '₱289')">
+        <h3>Activate Premium Plan</h3>
+        <p>Priority + full access</p>
+        <h4>₱289</h4>
+    </div>
+
+</div>
+
+<!-- SELECTED PLAN -->
+<h3 id="selectedPlan" style="text-align:center;">Select a plan</h3>
+
+<!-- DOCTORS -->
+<div class="doctor-container">
+
+    <div class="doctor-card" onclick="handleDoctorClick(event, this, 'Dr. Maria Santos')">
+        <h3>Dr. Maria Santos</h3>
+        <p>Pediatric Specialist</p>
+        <span class="badge"></span>
+
+        <div class="doctor-desc">
+            Expert in child health, vaccinations, and newborn care. Helps parents monitor baby development and common illnesses.
+        </div>
+        <div class="schedule"></div>
+    </div>
+
+    <div class="doctor-card" onclick="handleDoctorClick(event, this, 'Dr. John Cruz')">
+        <h3>Dr. Angela Reyes</h3>
+        <p>OB-GYNE</p>
+        <span class="badge"></span>
+
+        <div class="doctor-desc">
+            Specializes in women's reproductive health, pregnancy care, prenatal checkups, and safe delivery guidance for mothers.
+        </div>
+        <div class="schedule"></div>
+    </div>
+
+    <div class="doctor-card" onclick="handleDoctorClick(event, this, 'Dr. Mark Reyes')">
+        <h3>Dr. Mark Reyes</h3>
+        <p>Psychiatrist</p>
+        <span class="badge"></span>
+
+        <div class="doctor-desc">
+            Focuses on mental health support for parents, including stress management, emotional well-being, and postpartum mental care.
+        </div>
+        <div class="schedule"></div>
+    </div>
+
+</div>
+
+<!-- FORM -->
+<div class="booking-form">
+
+    <h3 id="selectedDoctor">Select a doctor</h3>
+
+    <input type="date" id="date">
+    <input type="time" id="time">
+
+    <button onclick="openModal()">Confirm Booking</button>
+</div>
+
+<!-- POPUP FORM -->
+<div id="bookingModal" class="modal">
+
+    <div class="modal-content">
+
+        <h3>Patient Information</h3>
+
+        <input type="text" id="name" placeholder="Name">
+        <input type="text" id="spouse" placeholder="Spouse’s Name (Optional)">
+        <input type="text" id="baby" placeholder="Baby’s Name">
+        <input type="email" id="email" placeholder="Email">
+        <input type="text" id="contact" placeholder="Contact Number">
+
+        <input type="date" id="modalDate">
+        <input type="time" id="modalTime">
+
+        <button onclick="submitBooking()">Confirm</button>
+        <button onclick="closeModal()">Cancel</button>
+
+    </div>
+
+</div>
+
+<div class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-section">
+            <h3>CareBridge</h3>
+            <p>Your partner in parenting and healthcare support.</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <p onclick="goToDashboard()">Home</p>
+            <p onclick="goToResources()">Resources</p>
+            <p onclick="goToAI()">AI Assistant</p>
+            <p onclick="goToBooking()">Consult</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p>Email: carebridge@gmail.com</p>
+            <p>Phone: +63 912 345 6789</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 CareBridge. All rights reserved.</p>
+    </div>
+
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

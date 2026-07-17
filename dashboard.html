@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - CareBridge</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- =========================
+     NAVBAR
+========================= -->
+<div class="navbar">
+    <div class="nav-left">
+        <img src="images/logo.png" class="nav-logo">
+        <span>CareBridge</span>
+    </div>
+
+    <div class="nav-right">
+        <span onclick="goToDashboard()">Home</span>
+        <span onclick="goToResources()">Resources</span>
+        <span onclick="goToAI()">Chat With Us</span>
+        <span onclick="goToBooking()">Consult</span>
+        <span onclick="goToMyBookings()">My Bookings</span> 
+        <span onclick="goToLogin()">Logout</span>
+    </div>
+</div>
+
+<!-- =========================
+     HEADER SECTION
+========================= -->
+<div class="hero">
+
+    <div class="hero-content">
+
+        <!-- TEXT -->
+        <div class="hero-text">
+            <h1>CareBridge Provides Smart Parenting Support</h1>
+            <p>Access resources, AI assistance, and doctor consultation anytime.</p>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =========================
+     SERVICES
+========================= -->
+<div class="section">
+    <h2>Our Services</h2>
+
+    <div class="cards">
+
+        <div class="dash-card" onclick="goToResources()">
+            <h3>Resources</h3>
+            <p>Guides and parenting tips</p>
+        </div>
+
+        <div class="dash-card" onclick="goToAI()">
+            <h3>Chat With Us</h3>
+            <p>Ask questions anytime</p>
+        </div>
+
+        <div class="dash-card" onclick="goToBooking()">
+            <h3>Consult Doctor</h3>
+            <p>Book professional help</p>
+        </div>
+
+    </div>
+</div>
+
+<!-- =========================
+     ABOUT / DOCUMENTATION
+========================= -->
+<div class="section">
+
+    <h2>About CareBridge</h2>
+
+    <div class="info-container">
+
+        <div class="info-card">
+            <h3>Proposed Project</h3>
+            <p>
+                 First-time parents often experience uncertainty and anxiety as they navigate pregnancy, infancy, and early childhood. Parenting involves numerous responsibilities and decisions related to child care, health routines, emotional development, and daily management. These challenges are intensified by limited access to reliable guidance, busy schedules, and the overwhelming amount of unverified information available online, making it difficult for parents to find accurate and personalized support.
+CareBridge is a digital parenting guide platform accessible through a website and mobile application, designed to assist first-time parents throughout pregnancy, infancy, and early childhood. The platform provides personalized and timely guidance by analyzing user inputs such as the child’s age, daily routines, and parental concerns. Based on this information, CareBridge delivers tailored recommendations, step-by-step instructions, health reminders, and practical guidance to support informed decision-making.
+
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3>Business Background</h3>
+            <p>
+                The increasing reliance on digital platforms for health and lifestyle support has led to a growing demand for accessible and reliable parenting resources. First-time parents often face uncertainty during pregnancy, infancy, and early childhood, particularly due to limited access to personalized guidance and the abundance of unverified information online. CareBridge is a digital parenting guide platform designed to provide structured, expert-validated, and personalized support through a website and mobile application. By offering practical guidance, developmental tools, and emotional support, CareBridge aims to assist first-time parents in making informed decisions and promoting positive parenting practices.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =========================
+     FOOTER
+========================= -->
+<div class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-section">
+            <h3>CareBridge</h3>
+            <p>Your partner in parenting and healthcare support.</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <p onclick="goToDashboard()">Home</p>
+            <p onclick="goToResources()">Resources</p>
+            <p onclick="goToAI()">AI Assistant</p>
+            <p onclick="goToBooking()">Consult</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p>Email: carebridge@gmail.com</p>
+            <p>Phone: +63 912 345 6789</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 CareBridge. All rights reserved.</p>
+    </div>
+
+</div>
+
+<!-- =========================
+     SCRIPT
+========================= -->
+<script src="js/app.js"></script>
+
+</body>
+</html>
